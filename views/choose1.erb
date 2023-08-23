@@ -5,12 +5,15 @@
 <ul>
     
 
-    <% @generate.each do |element| %>
+<%@generate["symbols"].each do |currency_code, currency_data|%>
+ <%code = currency_data["code"]%>
+  
   <li>
-      <a href="/<%= element %>">
-        Convert 1 <%= element %> to...
+      <a href="/<%= code %>">
+        Convert 1 <%= code %> to...
       </a>
     </li>
+
  <% end %>
 
  

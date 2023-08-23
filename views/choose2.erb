@@ -2,15 +2,17 @@
 
 <p>Go <a href="/">back</a>.</p>
 
-
 <ul>
-    
-    <% @generate.each do |element| %>
-  <li>
-      <a href="/<%= @curr %>/<%= element %>">
-        Convert 1 <%= @curr %> to <%= element %>...
+ 
+<%@generate["symbols"].each do |currency_code, currency_data|%>
+ <%code = currency_data["code"]%>
+  
+   <li>
+      <a href="/<%= @curr %>/<%= code %>">
+        Convert 1 <%= @curr %> to <%= code %>...
       </a>
     </li>
+
  <% end %>
 
 
