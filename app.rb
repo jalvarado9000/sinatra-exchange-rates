@@ -17,10 +17,10 @@ def exchange
   
   end
 
-$currencyList = exchange
+#$currencyList = exchange
 
 get("/") do
-  @generate = $currencyList
+  @generate = exchange
  erb(:choose1)
 end
 
@@ -28,7 +28,7 @@ end
 #check on how to capture the response for the exchange
 get("/:currency") do
  
-  @generate = $currencyList
+  @generate = exchange
   ex = params[:currency].to_s
   @curr = ex
   @hash = exchange
